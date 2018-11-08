@@ -68,7 +68,7 @@ button {
 	text-transform: uppercase;
 	border: none;
 	background: none;
-	height: inherit;
+	height: 30px;
 	color: #77abff;
 	font-weight: 700;
 	letter-spacing: 1px;
@@ -94,3 +94,4 @@ button:hover{
 	margin: 1.6%;
 	padding-bottom: 30%;
 } */
+
