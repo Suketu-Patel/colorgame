@@ -14,6 +14,7 @@ colorDisplay.textContent = pickedColor;
 
 easyBtn.addEventListener("click", function(){         // Easy Button
   tracker = 3;
+  messageDisplay.textContent="";
   title.style.backgroundColor="#77abff";
   easyBtn.classList.add("buttonSelected");
   hardBtn.classList.remove("buttonSelected");
@@ -32,6 +33,7 @@ easyBtn.addEventListener("click", function(){         // Easy Button
 });
 hardBtn.addEventListener("click",function(){        //Hard Button
   tracker = 6;
+  messageDisplay.textContent="";
   title.style.backgroundColor="#77abff";
   easyBtn.classList.remove("buttonSelected");
   hardBtn.classList.add("buttonSelected");
@@ -39,6 +41,7 @@ hardBtn.addEventListener("click",function(){        //Hard Button
   colors = generateColor(tracker);
   pickedColor = colors[randomPicker(tracker)];
   for(var i=0;i<squares.length;i++){
+      squares[i].style.opacity="1";
       squares[i].style.backgroundColor = colors[i];
       squares[i].style.display="block";
   }
@@ -50,7 +53,7 @@ for(var i=0;i<squares.length;i++){
     if(clickedColor === pickedColor){
       changeColors();
       // colorDisplay.style.backgroundColor=pickedColor;
-      messageDisplay.textContent = "Correct Answer";
+      messageDisplay.textContent = "Correct";
       title.style.backgroundColor=pickedColor;
     resbtn.textContent="Play Again?"
     }
